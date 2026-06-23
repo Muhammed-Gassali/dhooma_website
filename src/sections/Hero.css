@@ -1,0 +1,206 @@
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 60px 0;
+  z-index: 1;
+}
+
+.hero-mesh {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.02) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Badge Container */
+.hero-badge-container {
+  margin-bottom: 1.5rem;
+}
+
+.hero-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.25rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-corporate);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.badge-glow {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+  animation: shine 4s infinite linear;
+}
+
+.badge-text {
+  font-family: var(--font-headings);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 150%; }
+}
+
+/* Headline */
+.hero-title {
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  color: var(--text-secondary);
+  max-width: 48rem;
+  margin-bottom: 3.5rem;
+  line-height: 1.6;
+}
+
+/* Splits Cards */
+.hero-splits {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 100%;
+  max-width: 950px;
+}
+
+@media (min-width: 768px) {
+  .hero-splits {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.hero-card-split {
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hero-card-split .card-inner {
+  padding: 2.75rem 2.25rem;
+}
+
+.split-bg-glow {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: 0;
+  opacity: 0.03;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+}
+
+.split-tech .split-bg-glow {
+  background: var(--tech-primary);
+  top: -50px;
+  right: -50px;
+}
+
+.split-creative .split-bg-glow {
+  background: var(--creative-primary);
+  top: -50px;
+  right: -50px;
+}
+
+.split-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 1.25rem;
+}
+
+.split-icon-wrapper {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-corporate);
+  color: var(--text-secondary);
+  transition: all 0.5s ease;
+}
+
+.split-tech .split-icon-wrapper {
+  color: var(--tech-primary);
+  border-color: rgba(6, 182, 212, 0.2);
+}
+
+.split-creative .split-icon-wrapper {
+  color: var(--creative-primary);
+  border-color: rgba(236, 72, 153, 0.2);
+}
+
+.split-content h3 {
+  font-family: var(--font-headings);
+  font-size: 1.45rem;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.split-content p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.hero-card-split:hover {
+  transform: translateY(-5px);
+}
+
+/* Division specific focused states */
+.hero-card-split.split-tech.focused {
+  border-color: var(--tech-primary);
+  box-shadow: 0 10px 40px -15px var(--tech-glow-rgba);
+  background: rgba(3, 7, 18, 0.6);
+}
+
+.hero-card-split.split-creative.focused {
+  border-color: var(--creative-primary);
+  box-shadow: 0 10px 40px -15px var(--creative-glow-rgba);
+  background: rgba(17, 5, 28, 0.6);
+}
+
+.hero-card-split.focused .split-bg-glow {
+  opacity: 0.18;
+  transform: scale(1.2);
+}
+
+.hero-card-split.focused .split-icon-wrapper {
+  background: var(--theme-glow-rgba);
+  border-color: var(--theme-primary);
+  color: var(--text-primary);
+}
+

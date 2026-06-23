@@ -1,0 +1,132 @@
+.premium-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.75rem;
+  font-family: var(--font-headings);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  border: 1px solid transparent;
+  outline: none;
+  overflow: hidden;
+  transition: var(--transition-theme), transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+  letter-spacing: -0.01em;
+}
+
+.premium-btn:active {
+  transform: scale(0.96);
+}
+
+.btn-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+/* Primary Button Styling (Vibrant division gradient with glowing hover) */
+.btn-primary {
+  background: var(--theme-gradient);
+  border-color: transparent;
+  box-shadow: 0 4px 20px -5px var(--theme-glow-rgba);
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 8px 30px var(--theme-glow-rgba);
+  transform: translateY(-2px);
+}
+
+.btn-primary:hover::before {
+  opacity: 1;
+}
+
+/* Secondary Button (Glass outline styled with matching accent border glow) */
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-corporate);
+  backdrop-filter: blur(8px);
+}
+
+.btn-secondary .btn-glow {
+  position: absolute;
+  inset: 0;
+  background: var(--theme-gradient);
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--theme-primary);
+  box-shadow: 0 4px 15px -3px var(--theme-glow-rgba);
+  transform: translateY(-2px);
+}
+
+.btn-secondary:hover .btn-glow {
+  opacity: 0.05;
+}
+
+/* Ghost Button (Clean link with hover slide underline) */
+.btn-ghost {
+  background: transparent;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.btn-ghost::after {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 12px;
+  right: 12px;
+  height: 1px;
+  background: var(--theme-primary);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-ghost:hover {
+  transform: translateY(-1px);
+}
+
+.btn-ghost:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.premium-btn:hover .btn-icon {
+  transform: translateX(3px);
+}
+
+.premium-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}

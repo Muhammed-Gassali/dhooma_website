@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Syne:wght@500;700;800&display=swap');
+
+:root {
+  /* Fonts */
+  --font-headings: 'Outfit', sans-serif;
+  --font-accent: 'Syne', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Global Corporate Colors */
+  --bg-corporate: #09090b;
+  --bg-corporate-elevated: #18181b;
+  --text-primary: #fafafa;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  --border-corporate: rgba(255, 255, 255, 0.08);
+  --border-corporate-active: rgba(255, 255, 255, 0.2);
+
+  /* Division Theme - Dhoomatech (Software & Tech) */
+  --tech-primary: #06b6d4;      /* Neon Cyan */
+  --tech-secondary: #3b82f6;    /* Royal Blue */
+  --tech-accent: #22d3ee;       /* Light Cyan */
+  --tech-bg: #030712;           /* Cold Slate Navy */
+  --tech-bg-elevated: #0f172a;  /* Elevated Tech Navy */
+  --tech-glow-rgba: rgba(6, 182, 212, 0.15);
+  --tech-border: rgba(6, 182, 212, 0.2);
+  --tech-gradient: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+  --tech-text-gradient: linear-gradient(to right, #22d3ee, #3b82f6);
+
+  /* Division Theme - Dhooma Creative (Digital Marketing & Creative) */
+  --creative-primary: #ec4899;    /* Sunset Pink */
+  --creative-secondary: #f59e0b;  /* Amber Orange */
+  --creative-accent: #8b5cf6;     /* Violet */
+  --creative-bg: #11051c;         /* Warm Deep Orchid */
+  --creative-bg-elevated: #1e0b36;/* Elevated Warm Orchid */
+  --creative-glow-rgba: rgba(236, 72, 153, 0.15);
+  --creative-border: rgba(236, 72, 153, 0.2);
+  --creative-gradient: linear-gradient(135deg, #ec4899 0%, #f59e0b 100%);
+  --creative-text-gradient: linear-gradient(to right, #ec4899, #f59e0b);
+
+  /* Dynamic Active Theme Properties (mapped in App.jsx via data-theme attribute) */
+  --theme-primary: var(--tech-primary);
+  --theme-secondary: var(--tech-secondary);
+  --theme-accent: var(--tech-accent);
+  --theme-bg: var(--tech-bg);
+  --theme-bg-elevated: var(--tech-bg-elevated);
+  --theme-glow-rgba: var(--tech-glow-rgba);
+  --theme-border: var(--tech-border);
+  --theme-gradient: var(--tech-gradient);
+  --theme-text-gradient: var(--tech-text-gradient);
+
+  /* Shared Properties */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --radius-xl: 36px;
+  --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-theme: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+                      border-color 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                      box-shadow 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Theme Switching Mapping class / attribute selectors */
+[data-theme='tech'] {
+  --theme-primary: var(--tech-primary);
+  --theme-secondary: var(--tech-secondary);
+  --theme-accent: var(--tech-accent);
+  --theme-bg: var(--tech-bg);
+  --theme-bg-elevated: var(--tech-bg-elevated);
+  --theme-glow-rgba: var(--tech-glow-rgba);
+  --theme-border: var(--tech-border);
+  --theme-gradient: var(--tech-gradient);
+  --theme-text-gradient: var(--tech-text-gradient);
+}
+
+[data-theme='creative'] {
+  --theme-primary: var(--creative-primary);
+  --theme-secondary: var(--creative-secondary);
+  --theme-accent: var(--creative-accent);
+  --theme-bg: var(--creative-bg);
+  --theme-bg-elevated: var(--creative-bg-elevated);
+  --theme-glow-rgba: var(--creative-glow-rgba);
+  --theme-border: var(--creative-border);
+  --theme-gradient: var(--creative-gradient);
+  --theme-text-gradient: var(--creative-text-gradient);
+}

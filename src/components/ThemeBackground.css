@@ -1,0 +1,120 @@
+.theme-background-wrapper {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  background-color: var(--theme-bg);
+  transition: var(--transition-theme);
+  pointer-events: none;
+}
+
+/* Grid Overlay - Transitions opacity during division swap */
+.tech-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(6, 182, 212, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(6, 182, 212, 0.04) 1px, transparent 1px);
+  mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 80%);
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.tech-grid-overlay.active {
+  opacity: 0.8;
+}
+
+/* Floating Blob Container */
+.blobs-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(100px);
+}
+
+.floating-blob {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+  transition: var(--transition-theme), top 2s ease, left 2s ease, width 2s ease, height 2s ease;
+  pointer-events: none;
+}
+
+/* Blob 1: Top Left / Centered */
+.blob-primary {
+  width: 50vw;
+  height: 50vw;
+  max-width: 600px;
+  max-height: 600px;
+  top: -10%;
+  left: -5%;
+  background: var(--theme-primary);
+  animation: float-around-1 25s infinite ease-in-out alternate;
+}
+
+/* Blob 2: Bottom Right */
+.blob-secondary {
+  width: 45vw;
+  height: 45vw;
+  max-width: 500px;
+  max-height: 500px;
+  bottom: -15%;
+  right: -5%;
+  background: var(--theme-secondary);
+  animation: float-around-2 30s infinite ease-in-out alternate;
+}
+
+/* Blob 3: Center Left */
+.blob-accent {
+  width: 35vw;
+  height: 35vw;
+  max-width: 400px;
+  max-height: 400px;
+  top: 40%;
+  left: 30%;
+  background: var(--theme-accent);
+  opacity: 0.2;
+  animation: float-around-3 20s infinite ease-in-out alternate;
+}
+
+/* Keyframe animations for fluid movement */
+@keyframes float-around-1 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(8%, 12%) scale(1.1);
+  }
+  100% {
+    transform: translate(-5%, -5%) scale(0.95);
+  }
+}
+
+@keyframes float-around-2 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-10%, -8%) scale(0.9);
+  }
+  100% {
+    transform: translate(5%, 5%) scale(1.15);
+  }
+}
+
+@keyframes float-around-3 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(15%, -15%) rotate(180deg);
+  }
+  100% {
+    transform: translate(-10%, 10%) rotate(360deg);
+  }
+}

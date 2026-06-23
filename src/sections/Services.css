@@ -1,0 +1,104 @@
+.services-section {
+  border-bottom: 1px solid var(--border-corporate);
+}
+
+.services-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.services-header-desc {
+  font-size: 1.05rem;
+}
+
+/* Division Selector Tabs */
+.services-tabs {
+  display: flex;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-corporate);
+  padding: 4px;
+  border-radius: 40px;
+  margin-top: 1.5rem;
+  width: 100%;
+  max-width: 650px;
+}
+
+.services-tab-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-family: var(--font-headings);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  border-radius: 40px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (min-width: 576px) {
+  .services-tab-btn {
+    font-size: 0.95rem;
+  }
+}
+
+.services-tab-btn.active.tech {
+  background: var(--tech-gradient);
+  color: var(--text-primary);
+  box-shadow: 0 4px 15px -3px var(--tech-glow-rgba);
+}
+
+.services-tab-btn.active.creative {
+  background: var(--creative-gradient);
+  color: var(--text-primary);
+  box-shadow: 0 4px 15px -3px var(--creative-glow-rgba);
+}
+
+/* Cards Grid */
+.services-grid {
+  margin-top: 1rem;
+}
+
+.service-card {
+  height: 100%;
+}
+
+.service-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-corporate);
+  color: var(--theme-primary);
+  margin-bottom: 1.5rem;
+  transition: var(--transition-theme), transform 0.3s ease;
+}
+
+.service-card:hover .service-icon-box {
+  transform: scale(1.1) rotate(3deg);
+  background: var(--theme-glow-rgba);
+  border-color: var(--theme-primary);
+}
+
+.service-title {
+  font-family: var(--font-headings);
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.service-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}

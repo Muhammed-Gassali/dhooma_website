@@ -1,0 +1,87 @@
+.testimonials-section {
+  border-bottom: 1px solid var(--border-corporate);
+}
+
+.testimonials-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.testimonials-header-desc {
+  font-size: 1.05rem;
+}
+
+/* Testimonial card details */
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 320px;
+}
+
+.card-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.stars-row {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.star-icon {
+  color: #f59e0b; /* Amber Gold star */
+}
+
+.quote-icon {
+  color: var(--text-muted);
+  opacity: 0.4;
+}
+
+.testimonial-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+/* Author Details */
+.testimonial-author {
+  border-top: 1px solid var(--border-corporate);
+  padding-top: 1rem;
+}
+
+.author-details h5 {
+  font-family: var(--font-headings);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.15rem;
+}
+
+.author-details span {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Card hover glow states matching testimonial division focus */
+.testimonial-card.tech:hover {
+  border-color: rgba(6, 182, 212, 0.4);
+}
+
+.testimonial-card.creative:hover {
+  border-color: rgba(236, 72, 153, 0.4);
+}
+
+.testimonial-card.corporate:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+}
