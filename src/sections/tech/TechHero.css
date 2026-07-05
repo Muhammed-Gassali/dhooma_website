@@ -285,6 +285,12 @@
   .tech-hero-stats { gap: 0; }
   .tech-hero-stat-value { font-size: 22px; }
 }
+@media (max-width: 768px) {
+  .tech-hero {
+    min-height: clamp(520px, 72vh, 700px);
+    padding: 100px 0 60px 0;
+  }
+}
 @media (max-width: 600px) {
   .tech-btn-primary, .tech-btn-secondary { padding: 11px 18px; font-size: 13px; }
 }

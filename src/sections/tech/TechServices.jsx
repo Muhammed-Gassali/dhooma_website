@@ -4,19 +4,19 @@ import './TechServices.css';
 
 const services = [
   {
-    image: '/tech-mobile.png',
+    image: '/mobile 1.png',
     tag: 'BUILD POWERFUL MOBILE APPS',
     title: 'App Development',
     desc: 'Bring your next big idea to life with a feature-rich, powerful mobile app. We deliver customized application development solutions both for iOS and Android tailored to your industry needs.',
   },
   {
-    image: '/tech-dashboard.png',
+    image: '/web app 1.png',
     tag: 'CUSTOM WEBSITES TO GROW',
     title: 'Web Development',
     desc: 'Get a custom-designed web application that enhances your online visibility, manages complex data workflows, and attracts the right audience to help grow your business.',
   },
   {
-    image: '/tech-website.png',
+    image: '/wed design 1.jpg',
     tag: 'ENGAGING DESIGNS THAT CONVERT',
     title: 'Web Design & Development',
     desc: "The design and user experience of your website are key to retaining visitors and shaping your brand's image. We craft visually compelling, lead-generating websites that reinforce your brand identity.",

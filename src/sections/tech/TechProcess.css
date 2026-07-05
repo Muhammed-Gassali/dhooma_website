@@ -63,7 +63,7 @@
 .tech-step-num-wrap {
   width: 70px; height: 70px;
   border-radius: 50%;
-  background: #ffffff;
+  background: var(--tech-bg);
   border: 1.5px solid #ffffff;
   display: flex;
   align-items: center;
@@ -71,13 +71,13 @@
   margin-bottom: 28px;
   position: relative;
   transition: var(--transition-smooth);
-  box-shadow: 0 0 0 8px var(--tech-bg-2), 0 0 12px rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 0 8px var(--tech-bg-2), 0 0 12px rgba(255, 255, 255, 0.08);
   flex-shrink: 0;
 }
 .tech-step-num-wrap:hover {
-  border-color: #ffffff;
-  background: #ffffff;
-  box-shadow: 0 0 24px rgba(255, 255, 255, 0.35), 0 0 0 8px var(--tech-bg-2);
+  border-color: var(--tech-primary);
+  background: var(--tech-bg);
+  box-shadow: 0 0 24px rgba(6, 182, 212, 0.2), 0 0 0 8px var(--tech-bg-2);
   transform: translateY(-2px);
 }
 
