@@ -1,0 +1,98 @@
+/* ══════════════════════════════════════════
+   CREATIVE STATS — Improved vivid counters
+══════════════════════════════════════════ */
+
+.creative-stats-section {
+  background: var(--creative-bg-2);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+.creative-stats-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+    rgba(139, 92, 246, 0.05) 0%,
+    rgba(236, 72, 153, 0.05) 50%,
+    rgba(249, 115, 22, 0.03) 100%);
+  pointer-events: none;
+}
+
+.creative-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.creative-stats-reveal-wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.creative-stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 36px 16px 32px;
+  border: 1px solid rgba(139, 92, 246, 0.14);
+  border-radius: var(--radius-lg);
+  background: rgba(26, 13, 46, 0.5);
+  backdrop-filter: blur(10px);
+  transition: var(--transition-smooth);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.creative-stat-box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--creative-gradient);
+  opacity: 0;
+  transition: var(--transition-smooth);
+}
+.creative-stat-box:hover {
+  border-color: rgba(236, 72, 153, 0.28);
+  transform: translateY(-5px);
+  box-shadow: 0 16px 52px rgba(139, 92, 246, 0.14);
+}
+.creative-stat-box:hover::before { opacity: 1; }
+
+.creative-stat-icon {
+  font-size: 22px;
+  margin-bottom: 4px;
+  filter: drop-shadow(0 0 12px rgba(236,72,153,0.3));
+}
+
+.creative-stat-num {
+  font-family: var(--font-accent);
+  font-size: 54px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -2px;
+  background: var(--creative-gradient-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.creative-stat-name {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-muted);
+  letter-spacing: 0.2px;
+}
+
+@media (max-width: 768px) {
+  .creative-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .creative-stat-num { font-size: 42px; }
+}
+@media (max-width: 480px) {
+  .creative-stats-grid { grid-template-columns: 1fr; }
+}

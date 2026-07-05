@@ -1,0 +1,127 @@
+/* ══════════════════════════════════════════
+   TECH PROCESS — Improved 4-Step Timeline
+══════════════════════════════════════════ */
+
+.tech-process-section {
+  background: var(--tech-bg-2);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+.tech-process-section::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px; height: 500px;
+  background: radial-gradient(ellipse, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.tech-process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+  margin-top: 64px;
+}
+
+/* Connecting line — sits between circles */
+.tech-process-steps::before {
+  content: '';
+  position: absolute;
+  top: 35px; /* half of circle height */
+  left: calc(12.5% + 20px);
+  right: calc(12.5% + 20px);
+  height: 1px;
+  background: linear-gradient(to right,
+    var(--tech-primary) 0%,
+    var(--tech-secondary) 50%,
+    var(--tech-accent-2) 100%);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.tech-process-reveal-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.tech-process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+
+.tech-step-num-wrap {
+  width: 70px; height: 70px;
+  border-radius: 50%;
+  background: var(--tech-bg);
+  border: 1.5px solid rgba(6, 182, 212, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  position: relative;
+  transition: var(--transition-smooth);
+  box-shadow: 0 0 0 8px var(--tech-bg-2), 0 0 0 9px rgba(6,182,212,0.06);
+  flex-shrink: 0;
+}
+.tech-step-num-wrap:hover {
+  border-color: var(--tech-primary);
+  box-shadow: 0 0 32px rgba(6, 182, 212, 0.28), 0 0 0 8px var(--tech-bg-2);
+}
+
+.tech-step-icon { color: var(--tech-primary); }
+
+.tech-step-num {
+  position: absolute;
+  top: -10px; right: -10px;
+  width: 22px; height: 22px;
+  background: var(--tech-gradient);
+  border-radius: 50%;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(6,182,212,0.3);
+}
+
+.tech-step-title {
+  font-family: var(--font-headings);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.2px;
+  margin-bottom: 10px;
+}
+
+.tech-step-desc {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .tech-process-steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+  }
+  .tech-process-steps::before { display: none; }
+  .tech-step-num-wrap { box-shadow: 0 0 0 6px var(--tech-bg-2); }
+}
+@media (max-width: 480px) {
+  .tech-process-steps { grid-template-columns: 1fr; gap: 40px; }
+}

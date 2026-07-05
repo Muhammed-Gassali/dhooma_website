@@ -1,184 +1,106 @@
-@import './variables.css';
+/* ══════ Global Reset ══════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* Reset & Base Styles */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-  font-size: 16px;
-}
+html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--font-body);
-  background-color: var(--theme-bg);
-  color: var(--text-primary);
-  overflow-x: hidden;
-  transition: var(--transition-theme);
+  font-size: 14px;
   line-height: 1.6;
+  color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
-/* Scrollbar styling */
-::-webkit-scrollbar {
-  width: 10px;
-}
+img, video { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+ul { list-style: none; }
 
-::-webkit-scrollbar-track {
-  background: var(--bg-corporate);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--theme-border);
-  border-radius: var(--radius-sm);
-  border: 2px solid var(--bg-corporate);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--theme-primary);
-}
-
-/* Typography Utility Classes */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-headings);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-}
-
-h1 {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-}
-
-h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
-  margin-bottom: 1rem;
-}
-
-h3 {
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-}
-
-p {
-  color: var(--text-secondary);
-  font-size: 1rem;
-  max-width: 65ch;
-}
-
-/* Layout Utilities */
+/* ══════ Layout ══════ */
 .container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1140px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 28px;
 }
 
-.section {
-  padding: clamp(4rem, 8vw, 8rem) 0;
-  position: relative;
-  overflow: hidden;
+.section { padding: var(--section-padding) 0; position: relative; }
+
+/* ══════ Scroll Reveal System ══════ */
+.reveal-wrap {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal-wrap.revealed {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* Gradient Text Effect */
-.gradient-text {
-  background: var(--theme-text-gradient);
+/* Slide-up variant */
+.reveal-slide-up {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal-slide-up.revealed { opacity: 1; transform: translateY(0); }
+
+/* Slide-left variant */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal-left.revealed { opacity: 1; transform: translateX(0); }
+
+/* Scale-up variant */
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.94);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal-scale.revealed { opacity: 1; transform: scale(1); }
+
+/* ══════ Animated Gradient Text ══════ */
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animated-gradient-text {
+  background-size: 200% 200%;
+  animation: gradientShift 4s ease infinite;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
-  display: inline-block;
-  transition: var(--transition-theme);
 }
 
-.tech-text {
-  background: var(--tech-text-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+/* ══════ Shimmer highlight ══════ */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
 }
 
-.creative-text {
-  background: var(--creative-text-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+/* ══════ Font helpers ══════ */
+.font-headings { font-family: var(--font-headings); }
+.font-accent   { font-family: var(--font-accent); }
+.font-body     { font-family: var(--font-body); }
+
+/* ══════ Page-wise Fade-in Transition ══════ */
+.fade-in-page {
+  animation: fadeInPageAnim 0.75s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
-/* Animated Glow Blobs */
-.glow-blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  z-index: 0;
-  opacity: 0.45;
-  pointer-events: none;
-  transition: var(--transition-theme);
-}
-
-/* Grid Overlay Utility */
-.grid-overlay {
-  position: absolute;
-  inset: 0;
-  background-size: 40px 40px;
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  pointer-events: none;
-  z-index: 0;
-  mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
-  -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
-}
-
-/* Glassmorphism Classes */
-.glass-panel {
-  background: rgba(24, 24, 27, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border-corporate);
-  border-radius: var(--radius-md);
-  transition: var(--transition-theme);
-}
-
-.glass-panel:hover {
-  border-color: var(--theme-border);
-}
-
-/* Responsive grid layouts */
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
-}
-
-@media (min-width: 768px) {
-  .grid-2 {
-    grid-template-columns: 1fr 1fr;
+@keyframes fadeInPageAnim {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
   }
-}
-
-/* Form inputs styling */
-input, textarea, select {
-  width: 100%;
-  padding: 0.875rem 1rem;
-  background: rgba(24, 24, 27, 0.8);
-  border: 1px solid var(--border-corporate);
-  color: var(--text-primary);
-  border-radius: var(--radius-sm);
-  font-family: var(--font-body);
-  transition: var(--transition-theme);
-  outline: none;
-}
-
-input:focus, textarea:focus, select:focus {
-  border-color: var(--theme-primary);
-  box-shadow: 0 0 10px var(--theme-glow-rgba);
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -1,0 +1,60 @@
+/* ════════════════════════════════════
+   TECH SHARED — Fixed type scale
+════════════════════════════════════ */
+
+/* Section eyebrow label */
+.tech-section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--tech-primary);
+  margin-bottom: 14px;
+}
+.tech-section-label::before {
+  content: '';
+  display: block;
+  width: 24px; height: 2px;
+  background: linear-gradient(to right, var(--tech-primary), var(--tech-secondary));
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* Section heading */
+.tech-section-title {
+  font-family: var(--font-accent);
+  font-size: var(--text-section-title);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.12;
+  letter-spacing: -2px;
+  margin-bottom: 14px;
+}
+.tech-section-title .grad {
+  background: var(--tech-gradient-text);
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 5s ease infinite;
+}
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Section description */
+.tech-section-desc {
+  font-family: var(--font-body);
+  font-size: var(--text-section-sub);
+  font-weight: 400;
+  color: var(--text-secondary);
+  max-width: 480px;
+  line-height: 1.75;
+  margin-bottom: 52px;
+}
