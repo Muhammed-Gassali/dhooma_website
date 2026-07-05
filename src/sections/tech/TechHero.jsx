@@ -76,26 +76,7 @@ export default function TechHero() {
             </button>
           </div>
 
-          <div className="tech-hero-stats">
-            <div className="tech-hero-stat-item">
-              <span className="tech-hero-stat-value">150+</span>
-              <span className="tech-hero-stat-label">Projects Shipped</span>
-            </div>
-            <div className="tech-hero-stat-item">
-              <span className="tech-hero-stat-value">99.9%</span>
-              <span className="tech-hero-stat-label">Uptime SLA</span>
-            </div>
-            <div className="tech-hero-stat-item">
-              <span className="tech-hero-stat-value">50+</span>
-              <span className="tech-hero-stat-label">Enterprise Clients</span>
-            </div>
-          </div>
         </div>
-      </div>
-
-      <div className="tech-hero-scroll">
-        <div className="scroll-line" />
-        SCROLL
       </div>
     </section>
   );

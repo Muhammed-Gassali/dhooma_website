@@ -3,7 +3,7 @@
 ══════════════════════════════════════════ */
 
 .tech-contact-section {
-  background: var(--tech-bg);
+  background: #ffffff;
   padding: 100px 0;
   position: relative;
   overflow: hidden;
@@ -14,7 +14,7 @@
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   width: 1000px; height: 600px;
-  background: radial-gradient(ellipse, rgba(6, 182, 212, 0.05) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(6, 182, 212, 0.03) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -37,7 +37,7 @@
   font-family: var(--font-accent);
   font-size: clamp(32px, 4vw, 52px);
   font-weight: 800;
-  color: var(--text-primary);
+  color: #0f172a;
   line-height: 1.08;
   letter-spacing: -1.5px;
   margin-bottom: 18px;
@@ -53,7 +53,7 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 1.75;
-  color: var(--text-secondary);
+  color: #475569;
   margin-bottom: 36px;
 }
 
@@ -69,7 +69,7 @@
   font-family: var(--font-body);
   font-size: 14px;
   font-weight: 400;
-  color: var(--text-secondary);
+  color: #475569;
 }
 .tech-perk-dot {
   width: 7px; height: 7px;
@@ -81,11 +81,11 @@
 
 /* ─── Form ─── */
 .tech-contact-form {
-  background: rgba(8, 18, 36, 0.8);
-  border: 1px solid var(--tech-border);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: var(--radius-lg);
   padding: 36px 32px;
-  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -106,18 +106,18 @@
   font-family: var(--font-body);
   font-size: 11px;
   font-weight: 600;
-  color: var(--text-muted);
+  color: #475569;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 .tech-form-group input,
 .tech-form-group textarea,
 .tech-form-group select {
-  background: rgba(6, 182, 212, 0.03);
-  border: 1px solid var(--tech-border);
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
   border-radius: var(--radius-md);
   padding: 12px 15px;
-  color: var(--text-primary);
+  color: #0f172a;
   font-family: var(--font-body);
   font-size: 14px;
   font-weight: 400;
@@ -127,19 +127,19 @@
 }
 .tech-form-group input::placeholder,
 .tech-form-group textarea::placeholder {
-  color: var(--text-muted);
+  color: #94a3b8;
   font-size: 14px;
 }
 .tech-form-group input:focus,
 .tech-form-group textarea:focus,
 .tech-form-group select:focus {
   border-color: var(--tech-primary);
-  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.08);
-  background: rgba(6, 182, 212, 0.05);
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.15);
+  background: #ffffff;
 }
 .tech-form-group textarea { resize: vertical; min-height: 96px; }
 .tech-form-group select { cursor: pointer; }
-.tech-form-group select option { background: #0a1628; color: var(--text-primary); }
+.tech-form-group select option { background: #ffffff; color: #0f172a; }
 
 .tech-form-submit {
   padding: 14px;
