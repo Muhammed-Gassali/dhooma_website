@@ -16,7 +16,7 @@ export default function TechHero() {
         playsInline
       >
         <source
-          src="/11041433-hd_1920_1080_30fps.mp4"
+          src="/174086-850404739_medium.mp4"
           type="video/mp4"
         />
       </video>
