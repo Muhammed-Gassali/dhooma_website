@@ -10,6 +10,18 @@ export default function CreativeHero() {
 
   return (
     <section className="creative-hero" id="creative-hero">
+      <video
+        className="creative-hero-video"
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        <source
+          src="/digital marketing.mp4"
+          type="video/mp4"
+        />
+      </video>
       {/* Blobs */}
       <div className="creative-blob creative-blob-1" />
       <div className="creative-blob creative-blob-2" />
