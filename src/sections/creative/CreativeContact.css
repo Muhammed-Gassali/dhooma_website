@@ -105,11 +105,11 @@
 
 /* ─── Form ─── */
 .creative-contact-form {
-  background: rgba(26, 13, 46, 0.85);
-  border: 1px solid var(--creative-border);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: var(--radius-lg);
   padding: 36px 32px;
-  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -132,16 +132,16 @@
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: #475569;
 }
 .creative-form-group input,
 .creative-form-group textarea,
 .creative-form-group select {
-  background: rgba(236, 72, 153, 0.04);
-  border: 1px solid var(--creative-border);
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
   border-radius: var(--radius-md);
   padding: 12px 15px;
-  color: var(--text-primary);
+  color: #0f172a;
   font-family: var(--font-body);
   font-size: 14px;
   font-weight: 400;
@@ -151,21 +151,21 @@
 }
 .creative-form-group input::placeholder,
 .creative-form-group textarea::placeholder {
-  color: var(--text-muted);
+  color: #94a3b8;
   font-size: 14px;
 }
 .creative-form-group input:focus,
 .creative-form-group textarea:focus,
 .creative-form-group select:focus {
   border-color: var(--creative-primary);
-  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
-  background: rgba(236, 72, 153, 0.05);
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.15);
+  background: #ffffff;
 }
 .creative-form-group textarea { resize: vertical; min-height: 96px; }
 .creative-form-group select { cursor: pointer; }
 .creative-form-group select option {
-  background: var(--creative-bg-elevated);
-  color: var(--text-primary);
+  background: #ffffff;
+  color: #0f172a;
 }
 
 .creative-form-submit {
