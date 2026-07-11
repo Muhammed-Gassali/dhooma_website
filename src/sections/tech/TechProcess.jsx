@@ -46,7 +46,6 @@ export default function TechProcess() {
               <div className="tech-process-step">
                 <div className="tech-step-num-wrap">
                   {step.icon}
-                  <span className="tech-step-num">{i + 1}</span>
                 </div>
                 <h3 className="tech-step-title">{step.title}</h3>
                 <p className="tech-step-desc">{step.desc}</p>

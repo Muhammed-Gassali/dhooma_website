@@ -16,9 +16,9 @@
   --text-label:         12px;
 
   /* ── DHOOMATECH ── */
-  --tech-bg:            #020817;
-  --tech-bg-2:          #050d1a;
-  --tech-bg-elevated:   #0a1628;
+  --tech-bg:            #011f30;
+  --tech-bg-2:          #011f30;
+  --tech-bg-elevated:   #022b42;
   --tech-primary:       #06b6d4;
   --tech-secondary:     #3b82f6;
   --tech-accent:        #22d3ee;
@@ -28,7 +28,7 @@
   --tech-border:        rgba(6, 182, 212, 0.12);
   --tech-border-active: rgba(6, 182, 212, 0.38);
   --tech-gradient:      linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
-  --tech-gradient-text: linear-gradient(to right, #22d3ee, #818cf8);
+  --tech-gradient-text: linear-gradient(to right, #209acf, #77c267);
   --tech-gradient-hero: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
 
   /* ── DHOOMA CREATIVE ── */

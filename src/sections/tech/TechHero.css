@@ -23,6 +23,14 @@
   pointer-events: none;
 }
 
+.tech-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65); /* Black shade over the video */
+  z-index: 1;
+  pointer-events: none;
+}
+
 /* Dot grid */
 .tech-hero-grid {
   position: absolute;
@@ -128,9 +136,9 @@
 .tech-hero-subtitle {
   font-family: var(--font-body);
   font-size: var(--text-section-sub);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.75;
-  color: var(--text-secondary);
+  color: #ffffff;
   max-width: 500px;
   margin-bottom: 32px;
   animation: fadeSlideIn 0.55s 0.15s ease both;

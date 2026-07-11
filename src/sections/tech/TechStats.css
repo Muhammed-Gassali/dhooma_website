@@ -3,9 +3,9 @@
 ════════════════════════════════════ */
 
 .tech-stats-section {
-  background: var(--tech-bg-2);
-  border-top: 1px solid var(--tech-border);
-  border-bottom: 1px solid var(--tech-border);
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
   padding: 48px 0;
 }
 
@@ -25,7 +25,7 @@
   align-items: center;
   gap: 5px;
   padding: 20px 16px;
-  border-right: 1px solid var(--tech-border);
+  border-right: 1px solid #e2e8f0;
   transition: background 0.25s ease;
   text-align: center;
 }
@@ -53,14 +53,14 @@
 .tech-stat-label {
   font-family: var(--font-body);
   font-size: 12px;
-  font-weight: 400;
-  color: var(--text-muted);
+  font-weight: 500;
+  color: #475569;
 }
 
 @media (max-width: 768px) {
   .tech-stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .tech-stat-item:nth-child(2) { border-right: none; }
-  .tech-stat-item:nth-child(1),
-  .tech-stat-item:nth-child(2) { border-bottom: 1px solid var(--tech-border); }
+  .tech-stat-item { border-bottom: 1px solid #e2e8f0; }
+  .tech-stat-item:nth-child(even) { border-right: none; }
+  .tech-stat-item:nth-child(n+3) { border-bottom: none; }
   .tech-stat-number { font-size: 30px; }
 }

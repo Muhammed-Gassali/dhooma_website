@@ -20,6 +20,7 @@ export default function TechHero() {
           type="video/mp4"
         />
       </video>
+      <div className="tech-hero-overlay" />
       <div className="tech-hero-grid" />
       <div className="tech-hero-blob-1" />
       <div className="tech-hero-blob-2" />
@@ -50,11 +51,6 @@ export default function TechHero() {
 
       <div className="container">
         <div className="tech-hero-inner">
-          <div className="tech-badge">
-            <span className="tech-badge-dot" />
-            Dhoomatech — Software Engineering
-          </div>
-
           <h1 className="tech-hero-title">
             Engineering the <br />
             <span className="line-grad">Digital Future.</span>
@@ -70,9 +66,6 @@ export default function TechHero() {
               if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }}>
               Explore Services <ArrowRight size={16} />
-            </button>
-            <button className="tech-btn-secondary" onClick={() => navigate('/creative')}>
-              <Zap size={15} /> See Dhooma Creative
             </button>
           </div>
 

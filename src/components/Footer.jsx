@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Linkedin, Twitter, Instagram, Github } from 'lucide-react';
 import './Footer.css';
 
 export default function Footer() {
@@ -37,9 +38,10 @@ export default function Footer() {
               }
             </p>
             <div className="footer-socials">
-              {['in', 'tw', 'ig', 'gh'].map((s, i) => (
-                <a href="#" key={i} className="footer-social-link" aria-label={s}>{s.toUpperCase()}</a>
-              ))}
+              <a href="#" className="footer-social-link" aria-label="LinkedIn"><Linkedin size={16} /></a>
+              <a href="#" className="footer-social-link" aria-label="Twitter"><Twitter size={16} /></a>
+              <a href="#" className="footer-social-link" aria-label="Instagram"><Instagram size={16} /></a>
+              <a href="#" className="footer-social-link" aria-label="GitHub"><Github size={16} /></a>
             </div>
           </div>
 

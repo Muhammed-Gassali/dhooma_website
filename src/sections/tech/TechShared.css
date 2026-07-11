@@ -12,7 +12,7 @@
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--tech-primary);
+  color: #77c267;
   margin-bottom: 14px;
 }
 .tech-section-label::before {
@@ -34,7 +34,9 @@
   letter-spacing: -2px;
   margin-bottom: 14px;
 }
-.tech-section-title .grad {
+.tech-section-title .grad,
+.whoweare-title .grad,
+.tech-services-title .grad {
   background: var(--tech-gradient-text);
   background-size: 200% 200%;
   background-clip: text;

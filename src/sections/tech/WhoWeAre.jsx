@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cpu, Palette, Users, TrendingUp } from 'lucide-react';
+import { Cpu, Palette, Users, TrendingUp, Linkedin, Twitter, Instagram, Github } from 'lucide-react';
 import ScrollReveal from '../../components/ScrollReveal';
 import './WhoWeAre.css';
 
@@ -36,8 +36,10 @@ export default function WhoWeAre() {
             <div className="whoweare-copy">
               <div className="tech-section-label">Who We Are</div>
               <h2 className="whoweare-title">
-                Crafting Digital Solutions. <br />
-                <span className="grad">Accelerating Brand Growth.</span>
+                <span className="grad">
+                  Crafting Digital Solutions. <br />
+                  Accelerating Brand Growth.
+                </span>
               </h2>
               <p className="whoweare-desc-text">
                 Dhoomatech Private Limited is a premier corporate agency operating with two specialized divisions. We believe software is only as good as its execution, and creative design is only as effective as the technology backing it up.
@@ -45,6 +47,12 @@ export default function WhoWeAre() {
               <p className="whoweare-desc-text">
                 By merging advanced software engineering with ROI-focused digital marketing, we provide our clients with a cohesive strategy that eliminates the disconnect between technology and sales.
               </p>
+              <div className="footer-socials" style={{ marginTop: '16px' }}>
+                <a href="#" className="footer-social-link" aria-label="LinkedIn"><Linkedin size={16} /></a>
+                <a href="#" className="footer-social-link" aria-label="Twitter"><Twitter size={16} /></a>
+                <a href="#" className="footer-social-link" aria-label="Instagram"><Instagram size={16} /></a>
+                <a href="#" className="footer-social-link" aria-label="GitHub"><Github size={16} /></a>
+              </div>
             </div>
           </ScrollReveal>
 

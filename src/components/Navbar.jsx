@@ -67,15 +67,6 @@ export default function Navbar() {
 
           {/* Actions */}
           <div className="nav-actions">
-            {isTech ? (
-              <Link to="/creative" className="nav-division-pill to-creative">
-                <Sparkles size={13} /> Dhooma Creative
-              </Link>
-            ) : (
-              <Link to="/" className="nav-division-pill to-tech">
-                <Code2 size={13} /> Dhoomatech
-              </Link>
-            )}
             <button
               className={`nav-cta-btn ${division}-cta`}
               onClick={() => scrollTo(isTech ? 'tech-contact' : 'creative-contact')}
@@ -104,16 +95,6 @@ export default function Navbar() {
             {l.label}
           </button>
         ))}
-        <div className="mobile-nav-divider" />
-        {isTech ? (
-          <Link to="/creative" className="nav-division-pill to-creative" style={{ justifyContent: 'center' }}>
-            <Sparkles size={13} /> Switch to Dhooma Creative
-          </Link>
-        ) : (
-          <Link to="/" className="nav-division-pill to-tech" style={{ justifyContent: 'center' }}>
-            <Code2 size={13} /> Switch to Dhoomatech
-          </Link>
-        )}
       </div>
     </>
   );
