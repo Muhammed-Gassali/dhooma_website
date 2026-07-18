@@ -1,5 +1,6 @@
 import React from 'react';
-import { Cpu, Palette, Users, TrendingUp, Linkedin, Twitter, Instagram, Github } from 'lucide-react';
+import { Cpu, Palette, Users, TrendingUp } from 'lucide-react';
+import { FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
 import ScrollReveal from '../../components/ScrollReveal';
 import './WhoWeAre.css';
 
@@ -48,10 +49,9 @@ export default function WhoWeAre() {
                 By merging advanced software engineering with ROI-focused digital marketing, we provide our clients with a cohesive strategy that eliminates the disconnect between technology and sales.
               </p>
               <div className="footer-socials" style={{ marginTop: '16px' }}>
-                <a href="#" className="footer-social-link" aria-label="LinkedIn"><Linkedin size={16} /></a>
-                <a href="#" className="footer-social-link" aria-label="Twitter"><Twitter size={16} /></a>
-                <a href="#" className="footer-social-link" aria-label="Instagram"><Instagram size={16} /></a>
-                <a href="#" className="footer-social-link" aria-label="GitHub"><Github size={16} /></a>
+                <a href="https://www.linkedin.com/company/dhoomatech/about/" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="LinkedIn"><FaLinkedin size={16} /></a>
+                <a href="https://www.instagram.com/dhoomatech/?hl=en" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Instagram"><FaInstagram size={16} /></a>
+                <a href="https://www.facebook.com/p/DhoomaTech-61550937094280/" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Facebook"><FaFacebook size={16} /></a>
               </div>
             </div>
           </ScrollReveal>

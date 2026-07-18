@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Linkedin, Twitter, Instagram, Github } from 'lucide-react';
+import { FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
 import './Footer.css';
 
 export default function Footer() {
@@ -38,10 +38,9 @@ export default function Footer() {
               }
             </p>
             <div className="footer-socials">
-              <a href="#" className="footer-social-link" aria-label="LinkedIn"><Linkedin size={16} /></a>
-              <a href="#" className="footer-social-link" aria-label="Twitter"><Twitter size={16} /></a>
-              <a href="#" className="footer-social-link" aria-label="Instagram"><Instagram size={16} /></a>
-              <a href="#" className="footer-social-link" aria-label="GitHub"><Github size={16} /></a>
+              <a href="https://www.linkedin.com/company/dhoomatech/about/" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="LinkedIn"><FaLinkedin size={16} /></a>
+              <a href="https://www.instagram.com/dhoomatech/?hl=en" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Instagram"><FaInstagram size={16} /></a>
+              <a href="https://www.facebook.com/p/DhoomaTech-61550937094280/" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Facebook"><FaFacebook size={16} /></a>
             </div>
           </div>
 

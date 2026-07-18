@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowRight, Code2 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import './CreativeHero.css';
 
 const floatIcons = ['✦', '◈', '❋', '◉', '✿'];
@@ -39,10 +39,6 @@ export default function CreativeHero() {
 
       <div className="container">
         <div className="creative-hero-inner">
-          <div className="creative-eyebrow">
-            <span className="creative-eyebrow-spark">✦</span>
-            Dhooma Creative — Digital Marketing & Design
-          </div>
 
           <h1 className="creative-hero-title">
             We Create.
@@ -61,19 +57,8 @@ export default function CreativeHero() {
             }}>
               See Our Work <ArrowRight size={16} />
             </button>
-            <button className="creative-btn-outline" onClick={() => navigate('/')}>
-              <Code2 size={15} /> Visit Dhoomatech
-            </button>
           </div>
 
-          <div className="creative-hero-client-strip">
-            <span className="creative-client-label">Trusted by</span>
-            <div className="creative-client-badges">
-              {['Startups', 'E-commerce', 'SaaS Brands', 'Local Businesses', 'Creators'].map((b, i) => (
-                <span className="creative-client-badge" key={i}>{b}</span>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </section>
